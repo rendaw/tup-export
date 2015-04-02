@@ -14,10 +14,10 @@ setup(
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: BSD License',
     ],
-    py_modules = ['tup-export'],
+    py_modules = ['tup_export'],
     entry_points = {
         'console_scripts': [
-            'tup-export = tup-export:main',
+            'tup-export = tup_export:main',
         ],
     },
 )

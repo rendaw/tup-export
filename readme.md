@@ -6,6 +6,10 @@
 
 `tup-export` scans the `tup` database, so you must have initialized and configured the tup build before exporting.  `tup-export` runs `tup scan` so the output should always be up-to-date.
 
+You must run `tup-export` from the project root (the directory containing `.tup`).
+
+The output script is relative to the project root.
+
 For command line usage, run `tup-export -h`.
 
 ## Installation

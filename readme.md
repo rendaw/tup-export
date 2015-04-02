@@ -2,6 +2,8 @@
 
 `tup-export` exports a tup project as a simple script.
 
+**note** This feature already exists in `tup` as `tup generate` - but it has some outstanding issues ([https://github.com/gittup/tup/issues/179]).  This may be an alternative until those are resolved.
+
 ## Usage
 
 `tup-export` scans the `tup` database, so you must have initialized and configured the tup build before exporting.  `tup-export` runs `tup scan` so the output should always be up-to-date.
@@ -19,6 +21,6 @@ Run `pip install git+https://github.com/Rendaw/tup-export`.
 ## Current limitations
 
 - Bash output only
-- Doesn't handle variable substitutions (Lua builds should be fine)
+- Doesn't handle variable/group substitutions
 - Ignores environment variables
-- May not handle some edge cases
+- May not handle some other edge cases

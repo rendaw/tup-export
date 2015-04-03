@@ -21,6 +21,6 @@ Run `pip install git+https://github.com/Rendaw/tup-export`.
 ## Current limitations
 
 - Bash output only
-- Doesn't handle variable/group substitutions
+- Doesn't handle variable substitutions
 - Ignores environment variables
 - May not handle some other edge cases

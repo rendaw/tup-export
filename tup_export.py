@@ -4,6 +4,7 @@ import os
 import collections
 import sys
 import re
+import pprint
 
 def main():
     parser = argparse.ArgumentParser(
@@ -17,6 +18,12 @@ def main():
         '-n', 
         '--noscan', 
         help='Don\'t scan before generating.',
+        action='store_true',
+    )
+    parser.add_argument(
+        '-v', 
+        '--verbose', 
+        help='Be verbose.',
         action='store_true',
     )
     args = parser.parse_args()
@@ -74,6 +81,9 @@ def main():
             commands[target_nid]['from'].add(nid)
         if not command['to']:
             starters.append((nid, command))
+
+    if args.verbose:
+        sys.stderr.write('Commands:\n{}'.format(pprint.pformat(commands)))
 
     # Serialize link order using depth first walk
     ordered_commands = collections.OrderedDict()

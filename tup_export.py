@@ -15,21 +15,12 @@ def main():
         help='Output script filename. Use - to write to stdout.'
     )
     parser.add_argument(
-        '-n', 
-        '--noscan', 
-        help='Don\'t scan before generating.',
-        action='store_true',
-    )
-    parser.add_argument(
         '-v', 
         '--verbose', 
         help='Be verbose.',
         action='store_true',
     )
     args = parser.parse_args()
-
-    if not args.noscan:
-        os.system('tup scan')
 
     db = sqlite3.connect('.tup/db')
     dbc = db.cursor()
